@@ -1,4 +1,6 @@
-﻿namespace HeroesLodge.Core
+﻿using HeroesLodge.Core.Rules;
+
+namespace HeroesLodge.Core
 {
     public class HeroBuilder
     {
@@ -13,6 +15,15 @@
         {
             var characterClass = new Pf2eRuleItemRepository().LoadClass(className);
             _character.CharacterClass = characterClass;
+            return this;
+        }
+
+        public HeroBuilder SetBoosts(int level, List<Ability> abilityBoosts)
+        {
+            if (_character.Build.Abilities.BoostsPerLevel.ContainsKey(level)) _character.Build.Abilities.BoostsPerLevel[level] = abilityBoosts;
+            else _character.Build.Abilities.BoostsPerLevel.Add(level, abilityBoosts);
+           
+            _character.Build.Abilities.ReloadAttributes();
             return this;
         }
 

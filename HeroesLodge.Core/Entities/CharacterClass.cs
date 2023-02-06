@@ -1,5 +1,5 @@
-﻿using System.Text.Json.Serialization;
-using System.Windows.Markup;
+﻿using HeroesLodge.Core.Rules;
+using System.Text.Json.Serialization;
 
 namespace HeroesLodge
 {
@@ -14,8 +14,8 @@ namespace HeroesLodge
         [JsonPropertyName("name")]
         public string Name { get; set; }
 
-        //[JsonProperty("system")]
-        //public SystemClass System { get; set; }
+        [JsonPropertyName("system")]
+        public SystemClass SystemClass { get; set; }
 
         [JsonPropertyName("type")]
         public string Type { get; set; }
