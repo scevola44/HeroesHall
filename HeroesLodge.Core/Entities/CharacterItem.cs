@@ -8,6 +8,6 @@ public class CharacterItem
     public CharacterItem(string name, string characterClass)
     {
         this.Name = name;
-        this.CharacterClass = new CharacterClass(characterClass);
+        this.CharacterClass = new CharacterClass();
     }
 }

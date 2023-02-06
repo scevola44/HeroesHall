@@ -12,6 +12,4 @@ namespace HeroesLodge.Tests
             Assert.IsNotNull(result);
         }
     }
-
-    //internal class FileLoaderForTest : FileLoader
 }

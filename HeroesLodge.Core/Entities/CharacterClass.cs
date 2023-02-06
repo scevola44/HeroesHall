@@ -1,12 +1,23 @@
-﻿namespace HeroesLodge
+﻿using System.Text.Json.Serialization;
+using System.Windows.Markup;
+
+namespace HeroesLodge
 {
     public class CharacterClass
     {
-        public string name { get; }
+        [JsonPropertyName("_id")]
+        public string Id { get; set; }
 
-        public CharacterClass(string name)
-        {
-            this.name = name;
-        }
+        [JsonPropertyName("img")]
+        public string Img { get; set; }
+
+        [JsonPropertyName("name")]
+        public string Name { get; set; }
+
+        //[JsonProperty("system")]
+        //public SystemClass System { get; set; }
+
+        [JsonPropertyName("type")]
+        public string Type { get; set; }
     }
 }
