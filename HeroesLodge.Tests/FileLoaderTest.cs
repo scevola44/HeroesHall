@@ -8,7 +8,7 @@ namespace HeroesLodge.Tests
         [TestMethod]
         public void LoadTest()
         {
-            var result = FileLoader.ReadClassFile("gunslinger");
+            var result = FileLoader.ReadClassFile("Classes\\gunslinger.json");
             Assert.IsNotNull(result);
         }
     }

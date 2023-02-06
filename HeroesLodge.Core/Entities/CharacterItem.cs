@@ -3,11 +3,10 @@
 public class CharacterItem
 {
     public string Name { get; }
-    public CharacterClass CharacterClass { get; }
+    public CharacterClass CharacterClass { get; set; }
 
-    public CharacterItem(string name, string characterClass)
+    public CharacterItem(string name)
     {
-        this.Name = name;
-        this.CharacterClass = new CharacterClass();
+        Name = name;
     }
 }
