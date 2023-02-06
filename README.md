@@ -58,3 +58,6 @@ If you'd like to request a new function, feel free to do so by opening an issue 
 
 ## [Pathfinder Compatibility License](https://paizo.com/pathfinder/compatibility)
 ### [(Coming Soon - ORC)](https://paizo.com/community/blog/v5748dyo6si7v?Paizo-Announces-SystemNeutral-Open-RPG-License)
+This system uses trademarks and/or copyrights owned by Paizo Inc., which are used with permission granted as part of the partnership agreement between Foundry Gaming LLC and Paizo Inc. This officially recognized game system was created and is maintained by the PF2E For Foundry VTT volunteer development team, and is published for free with the endorsement of Foundry Gaming LLC.
+
+If you would like to undertake a similar project, much of what this system includes is covered under Paizo's extremely generous Community Use Policy. For more information please visit https://paizo.com/communityuse. For more information about Paizo Inc. and Paizo products, please visit https://paizo.com/.
