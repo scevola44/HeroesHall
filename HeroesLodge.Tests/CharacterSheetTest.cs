@@ -3,7 +3,7 @@
 namespace HeroesLodge.Tests
 {
     [TestClass]
-    public class SystemHeroRulesTest
+    public class CharacterSheetTest
     {
         [DataTestMethod]
         [DataRow(ArmorType.Unarmored, 1)]
@@ -13,9 +13,10 @@ namespace HeroesLodge.Tests
         public void ArmorClassTest(ArmorType armorType, int proficiency)
         {
             var hero = new HeroBuilder("test").SetClass("gunslinger").Build();
+            var characterSheet = new CharacterSheet(hero);
 
             var expectedArmorClass = 10 + proficiency;
-            Assert.AreEqual(expectedArmorClass, hero.ArmorClass(armorType));
+            Assert.AreEqual(expectedArmorClass, characterSheet.ArmorClass(armorType));
         }
     }
 }

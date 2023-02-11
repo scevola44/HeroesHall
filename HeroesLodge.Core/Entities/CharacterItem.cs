@@ -13,9 +13,4 @@ public class CharacterItem
     {
         Name = name;
     }
-
-    public int ArmorClass(ArmorType armorType)
-    {
-        return 10 + (int)CharacterClass.SystemClass.Defenses.GetType().GetProperty(armorType.ToString()).GetValue(CharacterClass.SystemClass.Defenses);
-    }
 }
