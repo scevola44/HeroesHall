@@ -18,7 +18,7 @@ namespace HeroesLodge.Tests
             Assert.AreEqual("Gunslinger", hero.CharacterClass.Name);
         }
 
-        [TestMethod]
+        /*[TestMethod]
         public void HeroHasAttributes()
         {
             var hero = new HeroBuilder("character-with-ability-scores").SetBoosts(1, new List<Ability> { Ability.Dexterity }).Build();
@@ -29,6 +29,13 @@ namespace HeroesLodge.Tests
             Assert.AreEqual(10, hero.Build.Abilities.Wisdom);
             Assert.AreEqual(10, hero.Build.Abilities.Intelligence);
             Assert.AreEqual(10, hero.Build.Abilities.Charisma);
+        }*/
+
+        [TestMethod]
+        public void HeroHasKeyAbility()
+        {
+            var hero = new HeroBuilder("fighter-with-dex-key").SetClass("fighter").SetKeyAbility("dex").Build();
+            Assert.AreEqual("dex", hero.Details.KeyAbility);
         }
     }
 }

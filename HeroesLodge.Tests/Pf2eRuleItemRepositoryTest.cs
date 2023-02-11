@@ -22,6 +22,7 @@ namespace HeroesLodge.Tests
             Assert.AreEqual(1, systemClass.Defenses.Light);
             Assert.AreEqual(1, systemClass.Defenses.Medium);
             Assert.AreEqual(0, systemClass.Defenses.Heavy);
+            Assert.AreEqual("dex", systemClass.KeyAbility.Value.Single());
         }
     }
 }

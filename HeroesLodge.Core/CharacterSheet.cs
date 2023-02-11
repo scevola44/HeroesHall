@@ -19,5 +19,10 @@ namespace HeroesLodge.Core
         {
             return 10 + (int)_character.CharacterClass.SystemClass.Defenses.GetType().GetProperty(armorType.ToString()).GetValue(_character.CharacterClass.SystemClass.Defenses);
         }
+
+        public int StrengthScore()
+        {
+            return 10 + _character.Details.KeyAbility == "str" ? 2 : 0;
+        }
     }
 }

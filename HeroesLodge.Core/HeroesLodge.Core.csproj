@@ -30,9 +30,6 @@
 	  <None Remove="System.Text.Json" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Folder Include="Entities\" />
-	</ItemGroup>
-	<ItemGroup>
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
 	  <PackageReference Include="System.Text.Json" Version="7.0.1" />
 	</ItemGroup>
