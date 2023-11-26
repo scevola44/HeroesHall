@@ -1,0 +1,11 @@
+{
+    "name":"Test Character",
+    "level":1,
+    "ancestry":2,
+    "background":3,
+    "class":4,
+    "classFeats":{
+        "1":["Class Feat lv 1 - A", "Class Feat lv 1 - B"],
+        "2":["Class Feat lv 2 - A"]
+    }
+}
