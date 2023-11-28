@@ -15,7 +15,7 @@ public class CharacterCreationServiceFixtures
         var actualHero = _sut.GetHero();
 
 		Assert.NotNull(actualHero);
-		Assert.Equal(2, actualHero.CharacterClass);
+		Assert.Equal("class-2", actualHero.CharacterClass.ToString());
 
 		var actualSavingThrows = actualHero.Checks.SavingThrows;
 		Assert.Equal(ProficiencyDegree.Expert, actualSavingThrows[SavingThrowName.Fortitude].DegreeOfProficiency);

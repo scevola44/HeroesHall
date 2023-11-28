@@ -13,21 +13,20 @@ public class CharacterClassJsonReaderFixtures
 
         Assert.NotNull(actual);
         Assert.Equal("Barbarian", actual.Name);
+        Assert.Equal("class-2", actual.Id);
 
-        Assert.Equal(6, actual.InitialProficiencies.Count);
-
-        var perceptionProficiency = actual.InitialProficiencies.Single(p => p.Type == CheckType.Perception);
+        var perceptionProficiency = actual.InitialProficiencyPerception;
         Assert.Equal("Perception", perceptionProficiency.Name);
         Assert.Equal(ProficiencyDegree.Expert, perceptionProficiency.DegreeOfProficiency);
         Assert.Equal(CharacterAttribute.WIS, perceptionProficiency.Attribute);
 
-        var skillProficiencies = actual.InitialProficiencies.FindAll(p => p.Type == CheckType.Skill);
+        var skillProficiencies = actual.InitialProficienciesSkills;
         Assert.Single(skillProficiencies);
 
-        var loreProficiency = actual.InitialProficiencies.Single(p => p.Type == CheckType.Lore);
+        var loreProficiency = actual.InitialProficienciesLore.Single();
         Assert.Equal("Warfare", loreProficiency.Specifics);
 
-        var savingThrowsProficiencies = actual.InitialProficiencies.FindAll(p => p.Type == CheckType.SavingThrow);
+        var savingThrowsProficiencies = actual.InitialProficienciesSavingThrows;
         Assert.Equal(3, savingThrowsProficiencies.Count);
         Assert.Equal(ProficiencyDegree.Expert, savingThrowsProficiencies.Single(x => x.Name == "Fortitude").DegreeOfProficiency);
         Assert.Equal(ProficiencyDegree.Trained, savingThrowsProficiencies.Single(x => x.Name == "Reflex").DegreeOfProficiency);

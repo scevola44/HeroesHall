@@ -14,7 +14,7 @@ public class HeroJsonReaderFixtures
         Assert.Equal(1, actual.Level);
         Assert.Equal(2, actual.Ancestry);
         Assert.Equal(3, actual.Background);
-        Assert.Equal(4, actual.CharacterClass);
+        Assert.Equal("class-4", actual.CharacterClass.ToString());
 
         Assert.Equal(2, actual.ClassFeats.Keys.Count);
 

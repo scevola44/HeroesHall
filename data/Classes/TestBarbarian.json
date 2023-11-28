@@ -1,5 +1,6 @@
 {
-    "id":2,
+    "id":"class-2",
+    "aon_id":2,
     "name":"Barbarian",
     "initial_proficiencies_perception":{
         "type":1,

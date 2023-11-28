@@ -4,6 +4,8 @@ namespace HeroesHall.Core.Entities
 {
     public class Hero
     {
+        [JsonPropertyName("id")]
+        public string Id { get; set; }
         [JsonPropertyName("name")]
         public string Name { get; set; }
         [JsonPropertyName("level")]
@@ -13,7 +15,7 @@ namespace HeroesHall.Core.Entities
         [JsonPropertyName("background")]
         public int Background { get; set; }
         [JsonPropertyName("class")]
-        public int CharacterClass { get; set; }
+        public string CharacterClass { get; set; }
 
         [JsonPropertyName("classFeats")]
         //[JsonConverter(typeof(DictionaryJsonConverter))]

@@ -18,18 +18,15 @@ namespace HeroesHall.Core.Services
             var characterClass = new CharacterClassJsonReader().Load(className);
             _hero.CharacterClass = characterClass.Id;
 
-            _hero.Checks.SavingThrows = characterClass.InitialProficiencies
-                .FindAll(x => x.Type == CheckType.SavingThrow)
+            _hero.Checks.SavingThrows = characterClass.InitialProficienciesSavingThrows
                 .ToDictionary(st => Enum.Parse<SavingThrowName>(st.Name), st => st);
 
-            _hero.Checks.Perception = characterClass.InitialProficiencies.Single(x => x.Type == CheckType.Perception);
+            _hero.Checks.Perception = characterClass.InitialProficiencyPerception;
 
-            _hero.Checks.Skills = characterClass.InitialProficiencies
-                .FindAll(x => x.Type == CheckType.Skill)
+            _hero.Checks.Skills = characterClass.InitialProficienciesSkills
                 .ToDictionary(st => Enum.Parse<SkillName>(st.Name), st => st);
 
-            _hero.Checks.LoreChecks = characterClass.InitialProficiencies
-                .FindAll(x => x.Type == CheckType.Lore)
+            _hero.Checks.LoreChecks = characterClass.InitialProficienciesLore
                 .ToDictionary(st => st.Specifics, st => st);
         }
 
