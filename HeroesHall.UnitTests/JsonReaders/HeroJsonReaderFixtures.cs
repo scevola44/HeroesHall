@@ -1,6 +1,6 @@
 ﻿using HeroesLodge.Core.JsonReaders;
 
-namespace HeroesHall.UnitTests;
+namespace HeroesHall.UnitTests.JsonReaders;
 
 public class HeroJsonReaderFixtures
 {
@@ -9,7 +9,7 @@ public class HeroJsonReaderFixtures
     [Fact]
     public void LoadHero()
     {
-        var actual = _sut.LoadHero("TestHero");
+        var actual = _sut.Load("TestHero");
         Assert.Equal("Test Character", actual.Name);
         Assert.Equal(1, actual.Level);
         Assert.Equal(2, actual.Ancestry);

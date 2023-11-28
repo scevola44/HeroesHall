@@ -1,6 +1,4 @@
-﻿
-
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
 namespace HeroesHall.Core.Entities
 {
@@ -19,7 +17,46 @@ namespace HeroesHall.Core.Entities
 
         [JsonPropertyName("classFeats")]
         //[JsonConverter(typeof(DictionaryJsonConverter))]
-        public IDictionary<int, IList<string>> ClassFeats { get; set; }
+        public Dictionary<int, IList<string>> ClassFeats { get; set; } = new();
+
+        [JsonPropertyName("attributes")]
+        public Dictionary<CharacterAttribute, int> Attributes { get; set; } = new();
+        [JsonPropertyName("checks")]
+        public Checks Checks { get; set; } = new ();
+    }
+
+    public class Checks
+    {
+        [JsonPropertyName("saving_throws")]
+        public Dictionary<SavingThrowName, Check> SavingThrows { get; set; }
+        [JsonPropertyName("perception")]
+        public Check Perception { get; set; }
+        [JsonPropertyName("skills")]
+        public Dictionary<SkillName, Check> Skills { get; set; }
+        [JsonPropertyName("lore_checks")]
+        public Dictionary<string, Check> LoreChecks { get; set; }
+    }
+
+    public enum SavingThrowName
+    {
+        Fortitude,
+        Reflex,
+        Will
+    }
+
+    public enum SkillName
+    {
+        Acrobatics,
+        Athletics,
+        Diplomacy
+    }
+
+    public enum CheckType
+    {
+        Perception = 1,
+        SavingThrow = 2,
+        Skill = 3,
+        Lore = 4
     }
 
     /*public class DictionaryJsonConverter : JsonConverter

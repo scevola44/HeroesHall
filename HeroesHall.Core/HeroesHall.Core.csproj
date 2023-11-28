@@ -28,11 +28,13 @@
 	  <None Remove="Entities\" />
 	  <None Remove="FileManagement\" />
 	  <None Remove="JsonReaders\" />
+	  <None Remove="Services\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Entities\" />
 	  <Folder Include="FileManagement\" />
 	  <Folder Include="JsonReaders\" />
+	  <Folder Include="Services\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />

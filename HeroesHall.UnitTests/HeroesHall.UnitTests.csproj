@@ -30,4 +30,12 @@
   <ItemGroup>
     <ProjectReference Include="..\HeroesHall.Core\HeroesHall.Core.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="JsonReaders\" />
+    <None Remove="e2e\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="JsonReaders\" />
+    <Folder Include="e2e\" />
+  </ItemGroup>
 </Project>
